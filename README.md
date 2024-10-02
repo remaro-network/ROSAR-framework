@@ -3,7 +3,6 @@ TODO: upload implementation
 ROSAR: RObust Sonar Adversarial Re-training
 
 ## Acknowledgements
-This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 956200.
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
 
