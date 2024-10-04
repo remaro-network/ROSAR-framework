@@ -2,6 +2,11 @@ TODO: upload implementation
 
 ROSAR: RObust Sonar Adversarial Re-training
 
+## Setup
+
+1. Clone the repository:
+`git clone --recursive git@github.com:remaro-network/ROSAR-framework.git`
+
 ## Acknowledgements
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
