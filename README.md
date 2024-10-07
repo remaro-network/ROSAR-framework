@@ -8,7 +8,8 @@ ROSAR: RObust Sonar Adversarial Re-training
 `git clone --recursive https://github.com/remaro-network/ROSAR-framework.git`
 
 2. Setup conda environment:
-`
+
+```
 # Change current working directory to ROSAR repository
 cd ROSAR-framework
 # Remove the old environment, if necessary.
@@ -17,7 +18,7 @@ conda deactivate; conda env remove --name ROSAR-framework
 conda env create -f alpha-beta-CROWN/complete_verifier/environment.yaml --name ROSAR-framework
 # activate the environment
 conda activate ROSAR-framework
-`
+```
 
 ## Acknowledgements
 
