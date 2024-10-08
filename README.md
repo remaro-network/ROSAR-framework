@@ -24,7 +24,7 @@ conda activate ROSAR-framework
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
 
-[<img src="images/remaro-right-1024.png">](https://remaro.eu/)
+[<img src="media/remaro-right-1024.png">](https://remaro.eu/)
 
 <a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en">
     <img align="left" height="60" alt="EU Flag" src="https://remaro.eu/wp-content/uploads/2020/09/flag_yellow_low.jpg">
