@@ -49,7 +49,7 @@ cd alpha-beta-CROWN/complete_verifier
 python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_example
 ```
 
-(optional) 4. Generate other property
+(optional) 4. Generate instance of the other property
 ```
 # Assuming that the current working directory is the main directory of ROSAR
 python generate_P2.py ./data/Compressed_SSS400.png 0 0.25
