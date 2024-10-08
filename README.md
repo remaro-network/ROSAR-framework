@@ -12,12 +12,32 @@ ROSAR: RObust Sonar Adversarial Re-training
 ```
 # Change current working directory to ROSAR repository
 cd ROSAR-framework
+
 # Remove the old environment, if necessary.
 conda deactivate; conda env remove --name ROSAR-framework
+
 # install all dependents into the alpha-beta-crown environment
 conda env create -f alpha-beta-CROWN/complete_verifier/environment.yaml --name ROSAR-framework
+
 # activate the environment
 conda activate ROSAR-framework
+```
+
+## Example usage
+
+1. Generate robustness property
+```
+# Assuming that the current working directory is the main directory of ROSAR
+python generate_P1.py ./data/Compressed_SSS400.png 0 0.10
+```
+
+2. Copy the safety property into the alpha-beta-CROWN tool
+```
+# Copy the instances.csv file
+cp instances.csv ./alpha-beta-CROWN/complete_verifier/models/yolox/
+
+# Copy the vnnlib file
+cp ./vnnlib/Compressed_SSS400_perturbed_bbox_0_delta_0.1.vnnlib ./alpha-beta-CROWN/complete_verifier/models/yolox/vnnlib/
 ```
 
 ## Acknowledgements
