@@ -2,7 +2,7 @@ TODO: upload implementation
 
 ROSAR: RObust Sonar Adversarial Re-training
 
-## Setup
+## Setup (tested under Ubuntu 20.04)
 
 1. Clone the repository:
 `git clone --recursive https://github.com/remaro-network/ROSAR-framework.git`
