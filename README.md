@@ -45,6 +45,27 @@ cd alpha-beta-CROWN/complete_verifier
 python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_example
 ```
 
+(optional) 4. Generate other property
+```
+# Assuming that the current working directory is the main directory of ROSAR
+python generate_P2.py ./data/Compressed_SSS400.png 0 0.25
+```
+
+(optional) 5. Copy the safety property into the tool
+```
+# Copy the instances.csv file
+cp instances.csv ./alpha-beta-CROWN/complete_verifier/models/yolox/
+
+# Copy the vnnlib file
+cp vnnlib/img_Compressed_SSS400_black_lines_0_min_delta_0.25.vnnlib alpha-beta-CROWN/complete_verifier/models/yolox/vnnlib/
+```
+
+(optional) 6. Run the tool
+```
+cd alpha-beta-CROWN/complete_verifier
+python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_example
+```
+
 ## Acknowledgements
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
