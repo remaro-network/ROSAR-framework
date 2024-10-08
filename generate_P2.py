@@ -137,18 +137,18 @@ def process_single_image(img, bbox_ind, model_path, min_delta):
     # filtering bboxes and computing conf/obj scores
     final_pred, indices_map = postprocess(decoded_pred, len(C_NAMES), CONF_THRESHOLD, NMS_THRESHOLD, CLASS_AGNOSTIC)
     final_pred, indices_map = final_pred[0], indices_map[0]
-    print('final_pred:', final_pred)
-    print('final_pred.shape:', final_pred.shape)
-    print('indices_map:', list(zip(range(len(indices_map)), indices_map)))
+    # print('final_pred:', final_pred)
+    # print('final_pred.shape:', final_pred.shape)
+    # print('indices_map:', list(zip(range(len(indices_map)), indices_map)))
 
     # draw_all_bboxes_and_plot(preproc_img, final_pred, 'all predictions')
 
     idx = bbox_ind
-    print('final_pred before:', final_pred)
+    # print('final_pred before:', final_pred)
     prediction_filtered = [pred for pred in final_pred if pred[-1] < 0.1]
-    print('final_pred after:', prediction_filtered)
+    # print('final_pred after:', prediction_filtered)
     prediction = prediction_filtered[idx]
-    print(idx, 'prediction:', prediction)
+    # print(idx, 'prediction:', prediction)
 
     # draw_all_bboxes_and_plot(preproc_img, [prediction], 'attacked prediction')
 
@@ -186,7 +186,7 @@ def process_single_image(img, bbox_ind, model_path, min_delta):
 
     # cv2.waitKey()
 
-def run(img, bbox_ind, min_delta):
+def run(img_path, bbox_ind, min_delta):
     prop_fold_path = 'vnnlib'
     instances_fname = 'instances.csv'
     if os.path.exists(prop_fold_path) and os.path.isdir(prop_fold_path):
@@ -201,7 +201,7 @@ def run(img, bbox_ind, min_delta):
     check_model(model_path)
     print('Class names:', C_NAMES)
 
-    process_single_image(img, bbox_ind, model_path, min_delta)
+    process_single_image(img_path, bbox_ind, model_path, min_delta)
 
     return
 
@@ -210,7 +210,7 @@ def main(opt):
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('img', type=str, help='input image name')
+    parser.add_argument('img_path', type=str, help='input image path')
     parser.add_argument('bbox_ind', type=int, help='index of the bounding box')
     parser.add_argument('min_delta', type=float, help='perturbation upper bound')
     opt = parser.parse_args()
