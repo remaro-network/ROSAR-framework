@@ -38,7 +38,9 @@ cp instances.csv ./alpha-beta-CROWN/complete_verifier/models/yolox/
 
 # Copy the vnnlib file
 cp ./vnnlib/Compressed_SSS400_perturbed_bbox_0_delta_0.1.vnnlib ./alpha-beta-CROWN/complete_verifier/models/yolox/vnnlib/
-
+```
+3. Run the tool
+```
 # Change directory and run the tool
 cd alpha-beta-CROWN/complete_verifier
 python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_example
