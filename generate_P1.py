@@ -1,10 +1,8 @@
 import csv
 import os
-import random
 import cv2
 import argparse
 import torch
-import torchvision
 import numpy
 import shutil
 from pathlib import Path
@@ -56,7 +54,7 @@ def process_single_image(img_path, bbox_ind, model_path, delta):
     # cv2.imshow(f'img_plus_{delta}', img_plus)
     # cv2.waitKey()
 
-    prop_fn = f'img_{Path(img_info["file_name"]).stem}_perturbed_bbox_{idx}_delta_{delta}.vnnlib'
+    prop_fn = f'{Path(img_info["file_name"]).stem}_perturbed_bbox_{idx}_delta_{delta}.vnnlib'
     prop_path = str(Path('./vnnlib').joinpath(Path(prop_fn)))
 
     my_serialize_property(prop_path, model_path, img_minus, img_plus, raw_pred, indices_map[idx], 0.1, None)
@@ -154,9 +152,7 @@ def my_serialize_property(prop_path, model_path, im_minus, im_plus, raw_pred, ra
 
         f.write('))\n')
 
-def run(seed, img_path, bbox_ind, delta):
-    print('Seed: ' + str(seed))
-    random.seed(seed)
+def run(img_path, bbox_ind, delta):
     prop_fold_path = 'vnnlib'
     instances_fname = 'instances.csv'
     if os.path.exists(prop_fold_path) and os.path.isdir(prop_fold_path):
@@ -189,7 +185,6 @@ def add_delta_noise_to_bbox(im, bbox, d):
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('seed', type=str, default=10, help='random seed (int)')
     parser.add_argument('img_path', type=str, help='path of input image')
     parser.add_argument('bbox_ind', type=int, help='index of the bounding box')
     parser.add_argument('delta', type=float, help='perturbation upper bound')
@@ -271,7 +266,7 @@ def read_predict_draw(img_path):
     return pred_img
 
 def test_predictions():
-    ori_img_path = 'data/Compressed_23-06-2023_SurveyDataset-RealTimeSSS490.png'
+    ori_img_path = 'data/Compressed_490.png'
     pred_img = read_predict_draw(ori_img_path)
     cv2.imshow(ori_img_path, pred_img)
 
