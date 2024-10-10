@@ -28,6 +28,8 @@ conda activate ROSAR-framework
 
 ## Example usage
 
+### Generate and attack robustness properties
+
 1. Generate robustness property
 ```
 # Assuming that the current working directory is the main directory of ROSAR
@@ -69,6 +71,20 @@ cp vnnlib/img_Compressed_SSS400_black_lines_0_min_delta_0.25.vnnlib alpha-beta-C
 cd alpha-beta-CROWN/complete_verifier
 python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_example
 ```
+
+### To measure the adversarial robustness bound of the model
+
+1. Set the target model name in the `config.py` file
+```
+MODEL_NAME = 'KD_yolox_nano_L_ViT.onnx'
+```
+
+2. Start the binary search for finding the adversarial robustness bound of all input instances
+```
+./P1_binary_adv_bound.sh
+```
+
+3. The script generates a `statistics_T.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
 
 ## Acknowledgements
 
