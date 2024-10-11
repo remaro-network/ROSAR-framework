@@ -2,11 +2,11 @@
 
 export LC_NUMERIC="en_US.UTF-8"
 
-ab_main="$HOME/ROSAR-framework/alpha-beta-CROWN/complete_verifier"
+ab_main="$ROSAR_HOME/alpha-beta-CROWN/complete_verifier"
 ab_crown_vnnlib="$ab_main/models/yolox/vnnlib"
 ab_crown_instances="$ab_main/models/yolox/instances.csv"
 
-prop_main="$HOME/ROSAR-framework"
+prop_main="$ROSAR_HOME"
 prop_stat="$prop_main/statistics_`date +%s`.csv"
 
 echo "AB-Crown main:       $ab_main"
