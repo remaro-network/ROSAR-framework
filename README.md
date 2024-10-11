@@ -89,7 +89,7 @@ export ROSAR_HOME=<some_directory>/ROSAR-framework
 ./P1_binary_adv_bound.sh
 ```
 
-4. The script generates a `statistics_T.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
+4. The script generates a `statistics_<T>.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
 
 ## Acknowledgements
 
