@@ -104,6 +104,21 @@ export ROSAR_HOME=<some_directory>/ROSAR-framework
 python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv statistics_<T4>.csv statistics_<T5>.csv statistics_<T6>.csv
 ```
 
+## Experimental Results
+
+As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the raincloud plot.
+
+![Raincloud plots of the robustness values](raincloud.svg "Robustness boundary analysis")
+
+The mean and median values of each property/model combination are as follows.
+
+| Property | Metric | Original | PGD-SWDD | Patch-SWDD |
+|----------|--------|----------|----------|------------|
+| P1       | Mean   | 0.0107   | 0.0157   | 0.0098     |
+| P1       | Median | 0.0073   | 0.0137   | 0.0100     |
+| P2       | Mean   | 0.9302   | 0.9026   | 0.9317     |
+| P2       | Median | 0.9544   | 0.9359   | 0.9457     |
+
 ## Acknowledgements
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
