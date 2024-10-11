@@ -79,12 +79,17 @@ python abcrown.py --device cpu --config exp_configs/yolox/yolox.yaml --show_adv_
 MODEL_NAME = 'KD_yolox_nano_L_ViT.onnx'
 ```
 
-2. Start the binary search for finding the adversarial robustness bound of all input instances
+2. Set the shell variable `ROSAR_HOME` to the main directory of ROSAR
+```
+export ROSAR_HOME=<some_directory>/ROSAR-framework
+```
+
+4. Start the binary search for finding the adversarial robustness bound of all input instances
 ```
 ./P1_binary_adv_bound.sh
 ```
 
-3. The script generates a `statistics_T.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
+4. The script generates a `statistics_T.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
 
 ## Acknowledgements
 
