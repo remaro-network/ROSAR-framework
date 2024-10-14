@@ -111,13 +111,13 @@ python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv st
 
 These ONNX model weight files are different YOLOX-Nano versions we used throughout our experiments. 
 
-| Model name           | Link                               |
-|----------------------|------------------------------------|
-| Original without KD  | [onnx/yolox_nano.onnx](onnx/yolox_nano.onnx) |
-| Original with KD     | [onnx/KD_yolox_nano_L_ViT.onnx](onnx/KD_yolox_nano_L_ViT.onnx) |
-| Retrained PGD-P1     | [onnx/P1_epoch_15.onnx](onnx/P1_epoch_15.onnx) |
-| Retrained PGD-P2     | [onnx/P2_epoch_15.onnx](onnx/P2_epoch_15.onnx) |
-| Retrained Patch      | [onnx/yolov5_Patch_epoch_15.onnx](onnx/yolov5_Patch_epoch_15.onnx) |
+| Model name           | KD  | Link                               |
+|----------------------|-----|--------------------------------|
+| Original without KD  | No  | [onnx/yolox_nano.onnx](onnx/yolox_nano.onnx) |
+| Original with KD     | Yes | [onnx/KD_yolox_nano_L_ViT.onnx](onnx/KD_yolox_nano_L_ViT.onnx) |
+| Retrained PGD-P1     | No  | [onnx/P1_epoch_15.onnx](onnx/P1_epoch_15.onnx) |
+| Retrained PGD-P2     | No  | [onnx/P2_epoch_15.onnx](onnx/P2_epoch_15.onnx) |
+| Retrained Patch      | No  | [onnx/yolov5_Patch_epoch_15.onnx](onnx/yolov5_Patch_epoch_15.onnx) |
 
 ## Experimental Results
 
