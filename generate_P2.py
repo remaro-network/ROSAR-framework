@@ -184,7 +184,7 @@ def process_single_image(img, bbox_ind, model_path, min_delta):
         writer = csv.writer(f)
         writer.writerow([f'onnx/{MODEL_NAME}', prop_path, '125'])
 
-    # cv2.waitKey()
+        print('Property P1 generated under path:', prop_path)
 
 def run(img_path, bbox_ind, min_delta):
     prop_fold_path = 'vnnlib'

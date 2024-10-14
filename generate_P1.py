@@ -63,6 +63,8 @@ def process_single_image(img_path, bbox_ind, model_path, delta):
         writer = csv.writer(f)
         writer.writerow([f'onnx/{MODEL_NAME}', prop_path, '125'])
 
+        print('Property P1 generated under path:', prop_path)
+
 def my_serialize_property(prop_path, model_path, im_minus, im_plus, raw_pred, raw_bbox_ind, eps, img_size):
     h, w, n_bboxes, n_data = get_model_interface(model_path)
     n_channels = 3
