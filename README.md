@@ -121,7 +121,7 @@ These ONNX model weight files are different YOLOX-Nano versions used throughout 
 
 ## Experimental Results
 
-As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the raincloud plot. The raincloud plot is a combination of three elements: i. the data itself (scatter plot), the data distribution (violin plot) and general statistics (box plots) of the data. The blue triangle in each boxplot shows the mean value, while the blue line indicates the median of the data.
+As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the following raincloud plot. The raincloud plot is a combination of three elements: i. the data itself (scatter plot), ii. the data distribution (violin plot) and iii. general statistics (box plots) of the data. The blue triangle in each boxplot shows the mean value, while the blue line indicates the median of the data.
 
 ![Raincloud plots of the robustness values](raincloud.svg "Robustness boundary analysis")
 
