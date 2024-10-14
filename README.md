@@ -109,11 +109,11 @@ python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv st
 
 ## Experimental Results
 
-As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the raincloud plot.
+As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the raincloud plot. The raincloud plot is a combination of three elements: i. the data itself (scatter plot), the data distribution (violin plot) and general statistics (box plots) of the data. The blue triangle in each boxplot shows the mean value, while the blue line indicates the median of the data.
 
 ![Raincloud plots of the robustness values](raincloud.svg "Robustness boundary analysis")
 
-The mean and median values of each property/model combination are as follows.
+For clearer comparison, the mean and median values of each property/model combination are as follows:
 
 | Property | Metric | Original | PGD-SWDD | Patch-SWDD |
 |----------|--------|----------|----------|------------|
@@ -123,6 +123,10 @@ The mean and median values of each property/model combination are as follows.
 | P2       | Median | 0.9544   | 0.9359   | 0.9457     |
 
 ## Acknowledgements
+
+With questions please contact:
+- László Antal: antal@cs.rwth-aachen.de
+- Martin Aubard: MAubard@oceanscan-mst.com
 
 This work is part of the Reliable AI for Marine Robotics (REMARO) Project. For more info, please visit: https://remaro.eu/
 
