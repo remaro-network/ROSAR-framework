@@ -107,6 +107,18 @@ export ROSAR_HOME=<some_directory>/ROSAR-framework
 python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv statistics_<T4>.csv statistics_<T5>.csv statistics_<T6>.csv
 ```
 
+## ONNX model files
+
+These ONNX model weight files are different YOLOX-Nano versions we used throughout our experiments. 
+
+| Model name           | Link                               |
+|----------------------|------------------------------------|
+| Original without KD  | [onnx/yolox_nano.onnx](onnx/yolox_nano.onnx) |
+| Original with KD     | [onnx/KD_yolox_nano_L_ViT.onnx](onnx/KD_yolox_nano_L_ViT.onnx) |
+| Retrained PGD-P1     | [onnx/P1_epoch_15.onnx](onnx/P1_epoch_15.onnx) |
+| Retrained PGD-P2     | [onnx/P2_epoch_15.onnx](onnx/P2_epoch_15.onnx) |
+| Retrained Patch      | [onnx/yolov5_Patch_epoch_15.onnx](onnx/yolov5_Patch_epoch_15.onnx) |
+
 ## Experimental Results
 
 As a result of our analysis, we obtained a robustness value for each model per instance. These robustness values are visualized in the raincloud plot. The raincloud plot is a combination of three elements: i. the data itself (scatter plot), the data distribution (violin plot) and general statistics (box plots) of the data. The blue triangle in each boxplot shows the mean value, while the blue line indicates the median of the data.
