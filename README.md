@@ -102,22 +102,22 @@ export ROSAR_HOME=<some_directory>/ROSAR-framework
 
 6. The script generates a `statistics_<T>.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
 
-7. To generate the raincloud plots one can use the available `statistics_<T>.csv` files and the `analyize.py` script. This assumes that all three models (base, pgd-retrained, patch-retrained) were analyzed with respect to both P1 and P2 properties.
+7. To generate the raincloud plots, use the available `statistics_<T>.csv` files and the `analyize.py` script. This assumes that all three models (base, pgd-retrained, patch-retrained) were analyzed with respect to both P1 and P2 properties. Where P1: {original: `./statistics_<T1>.csv`, pgd-retrained: `./statistics_<T2>.csv`, patch-retrained: `./statistics_<T3>.csv`} and P2: {original: `./statistics_<T4>.csv`, pgd-retrained: `./statistics_<T5>.csv`, patch-retrained: `./statistics_<T6>.csv`}
 ```
 python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv statistics_<T4>.csv statistics_<T5>.csv statistics_<T6>.csv
 ```
 
 ## ONNX model files
 
-These ONNX model weight files are different YOLOX-Nano versions we used throughout our experiments. 
+These ONNX model weight files are different YOLOX-Nano versions used throughout our experiments. For the retrain models, we started the training using transfer learning from the original with KD model.
 
-| Model name           | KD  | Link                               |
-|----------------------|-----|--------------------------------|
-| Original without KD  | No  | [onnx/yolox_nano.onnx](onnx/yolox_nano.onnx) |
-| Original with KD     | Yes | [onnx/KD_yolox_nano_L_ViT.onnx](onnx/KD_yolox_nano_L_ViT.onnx) |
-| Retrained PGD-P1     | No  | [onnx/P1_epoch_15.onnx](onnx/P1_epoch_15.onnx) |
-| Retrained PGD-P2     | No  | [onnx/P2_epoch_15.onnx](onnx/P2_epoch_15.onnx) |
-| Retrained Patch      | No  | [onnx/yolov5_Patch_epoch_15.onnx](onnx/yolov5_Patch_epoch_15.onnx) |
+| Model name           | Knowledge Distillation  | Link                               |
+|:----------------------:|:-----:|:--------------------------------:|
+| Original without KD  | ✘  | [onnx/yolox_nano.onnx](onnx/yolox_nano.onnx) |
+| Original with KD     | ✔ | [onnx/KD_yolox_nano_L_ViT.onnx](onnx/KD_yolox_nano_L_ViT.onnx) |
+| Retrained PGD-P1     | ✘  | [onnx/P1_epoch_15.onnx](onnx/P1_epoch_15.onnx) |
+| Retrained PGD-P2     | ✘  | [onnx/P2_epoch_15.onnx](onnx/P2_epoch_15.onnx) |
+| Retrained Patch      | ✘  | [onnx/yolov5_Patch_epoch_15.onnx](onnx/yolov5_Patch_epoch_15.onnx) |
 
 ## Experimental Results
 
