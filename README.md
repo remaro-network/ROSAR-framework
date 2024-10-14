@@ -109,7 +109,7 @@ python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv st
 
 ## ONNX model files
 
-These ONNX model weight files are different YOLOX-Nano versions used throughout our experiments. For the retrain models, we started the training using transfer learning from the original with KD model.
+These ONNX model weight files are different YOLOX-Nano versions used throughout our experiments. For the retrained models, we started the training using transfer learning from the original with KD model.
 
 | Model name           | Knowledge Distillation  | Trained Model File                               |
 |:----------------------:|:-----:|:--------------------------------:|
