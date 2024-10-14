@@ -102,7 +102,7 @@ export ROSAR_HOME=<some_directory>/ROSAR-framework
 
 6. The script generates a `statistics_<T>.csv` file that contains the result of the adversarial attack for different robustness bounds. (This process might take some time!)
 
-7. To generate the raincloud plots, use the available `statistics_<T>.csv` files and the `analyize.py` script. This assumes that all three models (base, pgd-retrained, patch-retrained) were analyzed with respect to both P1 and P2 properties. Where P1: {original: `./statistics_<T1>.csv`, pgd-retrained: `./statistics_<T2>.csv`, patch-retrained: `./statistics_<T3>.csv`} and P2: {original: `./statistics_<T4>.csv`, pgd-retrained: `./statistics_<T5>.csv`, patch-retrained: `./statistics_<T6>.csv`}
+7. To generate the raincloud plots, use the available `statistics_<T>.csv` files and the `analyze.py` script. This assumes that all three models (base, pgd-retrained, patch-retrained) were analyzed with respect to both P1 and P2 properties. Where P1: {original: `./statistics_<T1>.csv`, pgd-retrained: `./statistics_<T2>.csv`, patch-retrained: `./statistics_<T3>.csv`} and P2: {original: `./statistics_<T4>.csv`, pgd-retrained: `./statistics_<T5>.csv`, patch-retrained: `./statistics_<T6>.csv`}
 ```
 python analyze.py statistics_<T1>.csv statistics_<T2>.csv statistics_<T3>.csv statistics_<T4>.csv statistics_<T5>.csv statistics_<T6>.csv
 ```
