@@ -136,7 +136,7 @@ For clearer comparison, the mean and median values of each property/model combin
 
 ## Acknowledgements
 
-With questions please contact:
+If you have any question, please contact:
 - László Antal: antal@cs.rwth-aachen.de
 - Martin Aubard: maubard@oceanscan-mst.com
 
