@@ -1,6 +1,6 @@
 # ROSAR: Robust Sonar Adversarial Re-training
 
-This repository contains the implementation of the ROSAR (robust sonar adversarial re-training) framework, which was introduced in our paper:
+This repository contains the implementation of the ROSAR (robust sonar adversarial re-training) framework, which was introduced in [our paper](https://arxiv.org/abs/2410.10554):
 
 > Aubard, M., Antal, L., Madureiera, A., Teixeira, L. F., Ábrahám, E. (2024). ROSAR: An Adversarial Re-Training Framework for Robust Side-Scan Sonar Object Detection. Submitted to IEEE International Conference on Robotics and Automation (ICRA), 2025. IEEE. (paper under review).
 
